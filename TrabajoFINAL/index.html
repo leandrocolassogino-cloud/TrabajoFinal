@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creador de Tarjetas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="darkModeBtn" class="float-btn">🌓</button>
+
+  <div class="container">
+    <h1 class="titulo">Creador de Tarjetas</h1>
+
+    <form id="formulario">
+      <input type="text" id="nombre" placeholder="Nombre" required />
+      <input type="number" id="edad" placeholder="Edad" required />
+      <input type="text" id="ocupacion" placeholder="Ocupación" required />
+
+      <label class="label-file">Subir foto</label>
+      <input type="file" id="foto" accept="image/*" />
+
+      <button type="submit">Crear Tarjeta</button>
+    </form>
+
+    <div id="agradecimiento" class="hidden mensaje-ok">
+      ¡Gracias por completar la información!
+    </div>
+
+    <h2>Tarjeta Generada</h2>
+    <div id="resultado" class="card hidden"></div>
+
+    <button id="descargarBtn" class="hidden download-btn">
+      Descargar tarjeta
+    </button>
+
+    <h2>Historial</h2>
+    <div id="historial" class="historial"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
